@@ -1,0 +1,66 @@
+.IpAddress {
+  background: url('/public/pattern-bg-mobile.png') center / cover no-repeat;
+  min-height: 40vh;
+  padding: 1em;
+  text-align: center;
+  position: relative;
+
+  &-heading1 {
+    margin-bottom: 1em;
+    color: $white;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+
+  &-form {
+    @include setMaxWidth(600px);
+    min-width: 100px;
+    margin-bottom: 1em;
+
+    &ContainerInputs {
+      position: relative;
+      display: flex;
+    }
+    
+    &Input {
+      flex-basis: 100%;
+      padding: 1em 1.2em;
+      border-radius: 1em;
+      @include setBorder-Outline;
+      font-family: inherit;
+      font-size: inherit;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    &Button {
+      display: block;
+      padding: 1em 1.5em;
+      height: 100%;
+      background: $very-dark-gray;
+      @include setBorder-Outline;
+      border-radius: 0 1em 1em 0;
+      position: absolute;
+      right: 0;
+      transition: 0.2s ease background;
+      cursor: pointer;
+
+      &:hover {
+        background: $dark-gray;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    background: url('/public/pattern-bg-desktop.png') center / cover no-repeat;
+    min-height: 30vh;
+
+    &-heading1 {
+      font-size: 1.9em;
+    }
+
+    &-form {
+      margin-bottom: 2em;
+    }
+  }
+}

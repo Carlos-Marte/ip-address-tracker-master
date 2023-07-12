@@ -1,0 +1,80 @@
+.IpInfo {
+  width: 100%;
+  @include setMaxWidth(630px);
+  padding: 0 1em;
+  position: absolute;
+  z-index: 50;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  &-list {
+    background: #fff;
+    padding: 1em 0;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0 2px 10px rgba(0 0 0 / 0.2);
+    overflow: hidden;
+  }
+
+  &-item {
+    padding: 0 0.5em;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+  }
+
+  &-paragraph {
+    color: $dark-gray;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.6em;
+    font-weight: 700;
+  }
+
+  &-spanInfo {
+    min-width: 100px;
+    color: $very-dark-gray;
+    font-weight: 500;
+    overflow-wrap: break-word;
+  }
+
+  &-separator {
+    width: 1px;
+    height: 60%;
+    opacity: 0.5;
+    background: $dark-gray;
+    position: absolute;
+    left: -5%;
+  }
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    @include setMaxWidth(1200px);
+    text-align: left;
+
+    &-list {
+      min-height: 150px;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &-item {
+      width: fit-content;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    &-paragraph {
+      padding-right: 1em;
+      font-size: 0.7em;
+    }
+
+    &-spanInfo {
+      font-size: 1.4em;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@mixin setBorder-Outline ($border: none, $outline: none) {
+  border: $border;
+  outline: $outline;
+}
+
+@mixin setMaxWidth ($width) {
+  max-width: $width;
+  margin: 0 auto;
+}
